@@ -1,7 +1,23 @@
 <h1 mat-dialog-title>Add Book</h1>
 <div mat-dialog-content>
   <mat-form-field appearance="outline">
-    <mat-label>Outline form field</mat-label>
-    <input matInput placeholder="Please enter " />
+    <mat-label>Book Name</mat-label>
+    <input matInput placeholder="Please enter book name" />
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Publication</mat-label>
+    <input matInput placeholder="Please enter publication" />
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Author</mat-label>
+    <input matInput placeholder="Please enter author" />
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Book Type</mat-label>
+    <mat-select placeholder="Types">
+      <mat-option *ngFor="let bookType of bookTypes" [value]="bookType">
+        {{ bookType }}
+      </mat-option>
+    </mat-select>
   </mat-form-field>
 </div>
