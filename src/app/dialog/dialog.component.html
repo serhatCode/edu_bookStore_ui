@@ -15,8 +15,8 @@
   <mat-form-field appearance="outline">
     <mat-label>Book Type</mat-label>
     <mat-select placeholder="Types">
-      <mat-option *ngFor="let bookType of bookTypes" [value]="bookType">
-        {{ bookType }}
+      <mat-option *ngFor="let bookType of bookTypes" [value]="bookType.id">
+        {{ bookType.name }}
       </mat-option>
     </mat-select>
   </mat-form-field>
